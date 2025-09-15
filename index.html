@@ -1,6 +1,3 @@
-<!-- This is a complete multi-page professional DuoLux Hub store setup -->
-
-/* ===== index.html ===== */
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +16,7 @@
     <a href="cart.html">Cart</a>
   </nav>
 </header>
+
 <section class="hero">
   <div class="hero-text">
     <h2>Welcome to DuoLux Hub</h2>
@@ -30,150 +28,9 @@
     </div>
   </div>
 </section>
+
 <footer>
   <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
 </footer>
 </body>
 </html>
-
-/* ===== style.css ===== */
-body { margin:0; font-family: Arial, sans-serif; background:#f8f9fa; color:#333; }
-header { background:#111; color:#fff; padding:15px; display:flex; justify-content:space-between; align-items:center; }
-header h1 { margin:0; }
-nav a { color:#fff; margin-left:20px; text-decoration:none; }
-nav a:hover { color:#ffd700; }
-.hero { background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30') no-repeat center center/cover; height:400px; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
-.hero-text h2 { font-size:2rem; margin-bottom:10px; }
-.hero-text p { font-size:1.2rem; margin-bottom:20px; }
-.btn { background:#111; color:#fff; padding:10px 20px; margin:5px; text-decoration:none; border-radius:5px; }
-.btn:hover { background:#444; }
-.btn.whatsapp { background:#25D366; }
-footer { text-align:center; padding:15px; background:#222; color:#fff; margin-top:20px; }
-
-/* ===== watches.html ===== */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DuoLux Hub - Watches</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1>DuoLux Hub</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="watches.html">Watches</a>
-    <a href="skincare.html">Skincare</a>
-    <a href="cart.html">Cart</a>
-  </nav>
-</header>
-<section>
-  <h2>Watches Collection</h2>
-  <div class="products">
-    <!-- Product Cards with Images and Add to Cart button -->
-  </div>
-</section>
-<footer>
-  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
-</footer>
-<script src="cart.js"></script>
-</body>
-</html>
-
-/* ===== skincare.html ===== */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DuoLux Hub - Skincare</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1>DuoLux Hub</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="watches.html">Watches</a>
-    <a href="skincare.html">Skincare</a>
-    <a href="cart.html">Cart</a>
-  </nav>
-</header>
-<section>
-  <h2>Skincare Products</h2>
-  <div class="products">
-    <!-- Product Cards with Images and Add to Cart button -->
-  </div>
-</section>
-<footer>
-  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
-</footer>
-<script src="cart.js"></script>
-</body>
-</html>
-
-/* ===== cart.html ===== */
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DuoLux Hub - Cart</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1>DuoLux Hub</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="watches.html">Watches</a>
-    <a href="skincare.html">Skincare</a>
-    <a href="cart.html">Cart</a>
-  </nav>
-</header>
-<section id="cart">
-  <h2>Your Cart</h2>
-  <div id="cart-items"></div>
-  <p id="total">Total: PKR 0</p>
-  <button onclick="checkout()">Checkout on WhatsApp</button>
-  <button onclick="payNow()">Pay Now with JazzCash / Easypaisa</button>
-</section>
-<footer>
-  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
-</footer>
-<script src="cart.js"></script>
-</body>
-</html>
-
-/* ===== cart.js ===== */
-let cart = [];
-function addToCart(product, price) {
-  cart.push({ product, price });
-  displayCart();
-}
-function displayCart() {
-  let cartItems = document.getElementById('cart-items');
-  if (!cartItems) return;
-  cartItems.innerHTML = '';
-  let total = 0;
-  cart.forEach(item => {
-    cartItems.innerHTML += `<p>${item.product} - PKR ${item.price}</p>`;
-    total += item.price;
-  });
-  let totalEl = document.getElementById('total');
-  if(totalEl) totalEl.innerText = `Total: PKR ${total}`;
-}
-function checkout() {
-  if(cart.length === 0){ alert('Your cart is empty!'); return; }
-  let message = 'Hello, I want to order:%0A';
-  cart.forEach(item => { message += `- ${item.product} (PKR ${item.price})%0A`; });
-  let total = cart.reduce((sum,item)=>sum+item.price,0);
-  message += `%0ATotal: PKR ${total}`;
-  window.open(`https://wa.me/923017016801?text=${message}`, '_blank');
-}
-function payNow() {
-  alert('Please send payment to:\nJazzCash / Easypaisa: 03280203486\nAfter payment, share screenshot on WhatsApp.');
-  window.open('https://wa.me/923280203486?text=I have sent payment for my order','_blank');
-}
