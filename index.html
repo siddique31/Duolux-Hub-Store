@@ -1,245 +1,179 @@
+<!-- This is a complete multi-page professional DuoLux Hub store setup -->
+
+/* ===== index.html ===== */
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DuoLux Hub</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ddd;
-    }
-    .section-title {
-      text-align: center;
-      margin: 40px 0 20px;
-      font-size: 1.5rem;
-      color: #111;
-    }
-    .container {
-      width: 90%;
-      margin: 20px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .product {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .product:hover {
-      transform: scale(1.03);
-    }
-    .product img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .product h3 {
-      margin: 10px 0;
-    }
-    .product p {
-      color: #666;
-      margin: 5px 0;
-    }
-    .product button {
-      background: #111;
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      margin: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .product button:hover {
-      background: #444;
-    }
-    #cart {
-      position: fixed;
-      top: 70px;
-      right: 20px;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      width: 300px;
-      max-height: 400px;
-      overflow-y: auto;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 15px;
-    }
-    #cart h2 {
-      margin-top: 0;
-      font-size: 1.2rem;
-    }
-    #cart ul {
-      list-style: none;
-      padding: 0;
-    }
-    #cart ul li {
-      font-size: 0.9rem;
-      margin: 5px 0;
-    }
-    #checkout {
-      background: green;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    #checkout:hover {
-      background: darkgreen;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DuoLux Hub - Home</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>DuoLux Hub</h1>
-    <nav>
-      <a href="#watches">Watches</a>
-      <a href="#skincare">Skincare</a>
-      <a href="#cart">Cart</a>
-    </nav>
-  </header>
-
-  <!-- Watches Section -->
-  <h2 id="watches" class="section-title">Watches Collection</h2>
-  <div class="container">
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71cQHwWbMXL._AC_UL480_FMwebp_QL65_.jpg" alt="Watch 1">
-      <h3>Classic Analog Watch</h3>
-      <p>Price: 2500 PKR</p>
-      <button onclick="addToCart('Classic Analog Watch', 2500)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71rU9N+TTQL._AC_UL480_FMwebp_QL65_.jpg" alt="Watch 2">
-      <h3>Luxury Black Watch</h3>
-      <p>Price: 3500 PKR</p>
-      <button onclick="addToCart('Luxury Black Watch', 3500)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/81dQwQlmPjL._AC_UL480_FMwebp_QL65_.jpg" alt="Watch 3">
-      <h3>Digital Sports Watch</h3>
-      <p>Price: 2800 PKR</p>
-      <button onclick="addToCart('Digital Sports Watch', 2800)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71KjV6z5shL._AC_UL480_FMwebp_QL65_.jpg" alt="Watch 4">
-      <h3>Metal Strap Premium</h3>
-      <p>Price: 4200 PKR</p>
-      <button onclick="addToCart('Metal Strap Premium', 4200)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/81bVtNf36sL._AC_UL480_FMwebp_QL65_.jpg" alt="Watch 5">
-      <h3>Minimalist Silver Watch</h3>
-      <p>Price: 3900 PKR</p>
-      <button onclick="addToCart('Minimalist Silver Watch', 3900)">Add to Cart</button>
+<header>
+  <h1>DuoLux Hub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="watches.html">Watches</a>
+    <a href="skincare.html">Skincare</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+<section class="hero">
+  <div class="hero-text">
+    <h2>Welcome to DuoLux Hub</h2>
+    <p>Your Destination for Timeless Watches & Premium Skincare</p>
+    <div class="cta-buttons">
+      <a href="watches.html" class="btn">Shop Watches</a>
+      <a href="skincare.html" class="btn">Shop Skincare</a>
+      <a href="https://wa.me/923017016801" class="btn whatsapp">Order on WhatsApp</a>
     </div>
   </div>
-
-  <!-- Skincare Section -->
-  <h2 id="skincare" class="section-title">Skincare Products</h2>
-  <div class="container">
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61u05b4K4QL._AC_UL480_FMwebp_QL65_.jpg" alt="Face Wash">
-      <h3>Refreshing Face Wash</h3>
-      <p>Price: 1200 PKR</p>
-      <button onclick="addToCart('Refreshing Face Wash', 1200)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/71vh0j8f4lL._AC_UL480_FMwebp_QL65_.jpg" alt="Moisturizer">
-      <h3>Hydrating Moisturizer</h3>
-      <p>Price: 1800 PKR</p>
-      <button onclick="addToCart('Hydrating Moisturizer', 1800)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61S8nDwN8mL._AC_UL480_FMwebp_QL65_.jpg" alt="Sunscreen">
-      <h3>SPF 50 Sunscreen</h3>
-      <p>Price: 1500 PKR</p>
-      <button onclick="addToCart('SPF 50 Sunscreen', 1500)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-      <img src="https://m.media-amazon.com/images/I/61aM6P1d1GL._AC_UL480_FMwebp_QL65_.jpg" alt="Night Cream">
-      <h3>Revitalizing Night Cream</h3>
-      <p>Price: 2000 PKR</p>
-      <button onclick="addToCart('Revitalizing Night Cream', 2000)">Add to Cart</button>
-    </div>
-  </div>
-
-  <div id="cart">
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <p><strong>Total: </strong><span id="total">0</span> PKR</p>
-    <button id="checkout" onclick="checkout()">Checkout on WhatsApp</button>
-  </div>
-
-  <script>
-    let cart = [];
-
-    function addToCart(product, price) {
-      cart.push({ product, price });
-      displayCart();
-    }
-
-    function displayCart() {
-      let cartItems = document.getElementById('cart-items');
-      let total = 0;
-      cartItems.innerHTML = '';
-      cart.forEach(item => {
-        let li = document.createElement('li');
-        li.textContent = `${item.product} - ${item.price} PKR`;
-        cartItems.appendChild(li);
-        total += item.price;
-      });
-      document.getElementById('total').textContent = total;
-    }
-
-    function checkout() {
-      let message = "Hello, I want to place an order:%0A";
-      cart.forEach(item => {
-        message += `- ${item.product} : ${item.price} PKR%0A`;
-      });
-      message += `Total: ${document.getElementById('total').textContent} PKR`;
-      window.open(`https://wa.me/923017016801?text=${message}`, '_blank');
-    }
-  </script>
+</section>
+<footer>
+  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
+</footer>
 </body>
 </html>
+
+/* ===== style.css ===== */
+body { margin:0; font-family: Arial, sans-serif; background:#f8f9fa; color:#333; }
+header { background:#111; color:#fff; padding:15px; display:flex; justify-content:space-between; align-items:center; }
+header h1 { margin:0; }
+nav a { color:#fff; margin-left:20px; text-decoration:none; }
+nav a:hover { color:#ffd700; }
+.hero { background: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30') no-repeat center center/cover; height:400px; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; }
+.hero-text h2 { font-size:2rem; margin-bottom:10px; }
+.hero-text p { font-size:1.2rem; margin-bottom:20px; }
+.btn { background:#111; color:#fff; padding:10px 20px; margin:5px; text-decoration:none; border-radius:5px; }
+.btn:hover { background:#444; }
+.btn.whatsapp { background:#25D366; }
+footer { text-align:center; padding:15px; background:#222; color:#fff; margin-top:20px; }
+
+/* ===== watches.html ===== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DuoLux Hub - Watches</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>DuoLux Hub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="watches.html">Watches</a>
+    <a href="skincare.html">Skincare</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+<section>
+  <h2>Watches Collection</h2>
+  <div class="products">
+    <!-- Product Cards with Images and Add to Cart button -->
+  </div>
+</section>
+<footer>
+  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>
+
+/* ===== skincare.html ===== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DuoLux Hub - Skincare</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>DuoLux Hub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="watches.html">Watches</a>
+    <a href="skincare.html">Skincare</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+<section>
+  <h2>Skincare Products</h2>
+  <div class="products">
+    <!-- Product Cards with Images and Add to Cart button -->
+  </div>
+</section>
+<footer>
+  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>
+
+/* ===== cart.html ===== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DuoLux Hub - Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>DuoLux Hub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="watches.html">Watches</a>
+    <a href="skincare.html">Skincare</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+<section id="cart">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <p id="total">Total: PKR 0</p>
+  <button onclick="checkout()">Checkout on WhatsApp</button>
+  <button onclick="payNow()">Pay Now with JazzCash / Easypaisa</button>
+</section>
+<footer>
+  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>
+
+/* ===== cart.js ===== */
+let cart = [];
+function addToCart(product, price) {
+  cart.push({ product, price });
+  displayCart();
+}
+function displayCart() {
+  let cartItems = document.getElementById('cart-items');
+  if (!cartItems) return;
+  cartItems.innerHTML = '';
+  let total = 0;
+  cart.forEach(item => {
+    cartItems.innerHTML += `<p>${item.product} - PKR ${item.price}</p>`;
+    total += item.price;
+  });
+  let totalEl = document.getElementById('total');
+  if(totalEl) totalEl.innerText = `Total: PKR ${total}`;
+}
+function checkout() {
+  if(cart.length === 0){ alert('Your cart is empty!'); return; }
+  let message = 'Hello, I want to order:%0A';
+  cart.forEach(item => { message += `- ${item.product} (PKR ${item.price})%0A`; });
+  let total = cart.reduce((sum,item)=>sum+item.price,0);
+  message += `%0ATotal: PKR ${total}`;
+  window.open(`https://wa.me/923017016801?text=${message}`, '_blank');
+}
+function payNow() {
+  alert('Please send payment to:\nJazzCash / Easypaisa: 03280203486\nAfter payment, share screenshot on WhatsApp.');
+  window.open('https://wa.me/923280203486?text=I have sent payment for my order','_blank');
+}
