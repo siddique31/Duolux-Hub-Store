@@ -8,46 +8,100 @@
 </head>
 <body>
 <header>
-  <div class="logo">DuoLux Hub</div>
+  <h1>DuoLux Hub</h1>
   <nav>
     <a href="index.html">Home</a>
     <a href="watches.html">Watches</a>
     <a href="skincare.html">Skincare</a>
     <a href="haircare.html">Haircare</a>
     <a href="accessories.html">Accessories</a>
-    <a href="babytoys.html">BabyToys</a>
+    <a href="babytoys.html">Baby Toys</a>
     <a href="perfumes.html">Perfumes</a>
-    <a href="cart.html">Cart 🛒</a>
+    <a href="cart.html">Cart</a>
   </nav>
 </header>
 
-<section>
+<section id="products">
   <h2>Accessories Collection</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://i.imgur.com/nWc4v7O.jpg" alt="Sunglasses">
-      <h3>Classic Sunglasses</h3>
-      <p>PKR 2000</p>
-      <button class="btn" onclick="addToCart('Classic Sunglasses', 2000)">Add to Cart</button>
+  <div class="product-grid">
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/81U8ZC5F6NL._AC_UY500_.jpg" alt="Leather Wallet">
+      <h3>Classic Leather Wallet</h3>
+      <p>PKR 1,499</p>
+      <button onclick="addToCart('Classic Leather Wallet', 1499)">Add to Cart</button>
     </div>
-    <div class="card">
-      <img src="https://i.imgur.com/FMQfBrz.jpg" alt="Wallet">
-      <h3>Leather Wallet</h3>
-      <p>PKR 2500</p>
-      <button class="btn" onclick="addToCart('Leather Wallet', 2500)">Add to Cart</button>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61DjwgS4cbL._AC_UL480_FMwebp_QL65_.jpg" alt="Aviator Sunglasses">
+      <h3>Aviator Sunglasses</h3>
+      <p>PKR 999</p>
+      <button onclick="addToCart('Aviator Sunglasses', 999)">Add to Cart</button>
     </div>
-    <div class="card">
-      <img src="https://i.imgur.com/QT5V2wd.jpg" alt="Bracelet">
-      <h3>Stylish Bracelet</h3>
-      <p>PKR 1500</p>
-      <button class="btn" onclick="addToCart('Stylish Bracelet', 1500)">Add to Cart</button>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61Q1rXcV6-L._AC_UL480_FMwebp_QL65_.jpg" alt="Stainless Steel Ring">
+      <h3>Stainless Steel Ring</h3>
+      <p>PKR 799</p>
+      <button onclick="addToCart('Stainless Steel Ring', 799)">Add to Cart</button>
     </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71zJw2Wl--L._AC_UL480_FMwebp_QL65_.jpg" alt="Stylish Backpack">
+      <h3>Stylish Backpack</h3>
+      <p>PKR 2,499</p>
+      <button onclick="addToCart('Stylish Backpack', 2499)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71pE6m3k2DL._AC_UL480_FMwebp_QL65_.jpg" alt="Women’s Handbag">
+      <h3>Women’s Handbag</h3>
+      <p>PKR 2,199</p>
+      <button onclick="addToCart('Women’s Handbag', 2199)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61VYXM9m6nL._AC_UL480_FMwebp_QL65_.jpg" alt="Smart Watch Strap">
+      <h3>Smart Watch Strap</h3>
+      <p>PKR 699</p>
+      <button onclick="addToCart('Smart Watch Strap', 699)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71TukW4hMGL._AC_UL480_FMwebp_QL65_.jpg" alt="Bluetooth Earbuds">
+      <h3>Bluetooth Earbuds</h3>
+      <p>PKR 3,499</p>
+      <button onclick="addToCart('Bluetooth Earbuds', 3499)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61aNez7rshL._AC_UL480_FMwebp_QL65_.jpg" alt="Keychain Combo">
+      <h3>Leather Keychain Combo</h3>
+      <p>PKR 499</p>
+      <button onclick="addToCart('Leather Keychain Combo', 499)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71QyCPGKxQL._AC_UL480_FMwebp_QL65_.jpg" alt="Necklace Pendant">
+      <h3>Necklace Pendant</h3>
+      <p>PKR 1,199</p>
+      <button onclick="addToCart('Necklace Pendant', 1199)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/71hRxAkdfyL._AC_UL480_FMwebp_QL65_.jpg" alt="Travel Duffel Bag">
+      <h3>Travel Duffel Bag</h3>
+      <p>PKR 3,199</p>
+      <button onclick="addToCart('Travel Duffel Bag', 3199)">Add to Cart</button>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801</p>
+  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801 | Pay via JazzCash/Easypaisa: 03280203486</p>
 </footer>
+
 <script src="cart.js"></script>
 </body>
 </html>
