@@ -3,51 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DuoLux Hub - Haircare</title>
+  <title>Haircare - Online Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="logo">DuoLux Hub</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="watches.html">Watches</a>
-    <a href="skincare.html">Skincare</a>
-    <a href="haircare.html">Haircare</a>
-    <a href="accessories.html">Accessories</a>
-    <a href="babytoys.html">BabyToys</a>
-    <a href="perfumes.html">Perfumes</a>
-    <a href="cart.html">Cart 🛒</a>
-  </nav>
-</header>
+  <header>
+    <h1>Haircare Products</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="watches.html">Watches</a>
+      <a href="skincare.html">Skincare</a>
+      <a href="haircare.html">Haircare</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="babytoys.html">Baby Toys</a>
+      <a href="perfumes.html">Perfumes</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>Haircare Products</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://i.imgur.com/qP5lM3V.jpg" alt="Shampoo">
-      <h3>Organic Shampoo</h3>
-      <p>PKR 1500</p>
-      <button class="btn" onclick="addToCart('Organic Shampoo', 1500)">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.imgur.com/WhxxQkM.jpg" alt="Hair Oil">
-      <h3>Herbal Hair Oil</h3>
-      <p>PKR 1300</p>
-      <button class="btn" onclick="addToCart('Herbal Hair Oil', 1300)">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="https://i.imgur.com/gjBo1Y1.jpg" alt="Conditioner">
-      <h3>Silky Conditioner</h3>
-      <p>PKR 1600</p>
-      <button class="btn" onclick="addToCart('Silky Conditioner', 1600)">Add to Cart</button>
-    </div>
-  </div>
-</section>
+  <main>
+    <h2>Best Haircare Products</h2>
+    <div class="product-grid">
 
-<footer>
-  <p>&copy; 2025 DuoLux Hub | Contact: 03017016801</p>
-</footer>
-<script src="cart.js"></script>
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61rL8O6k1GL._AC_UL480_FMwebp_QL65_.jpg" alt="Herbal Hair Oil">
+        <h3>Herbal Hair Oil 200ml</h3>
+        <p>Price: Rs 499</p>
+        <button onclick="addToCart('Herbal Hair Oil 200ml', 499)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61LoKj8RpOL._AC_UL480_FMwebp_QL65_.jpg" alt="Keratin Shampoo">
+        <h3>Keratin Smooth Shampoo</h3>
+        <p>Price: Rs 799</p>
+        <button onclick="addToCart('Keratin Smooth Shampoo', 799)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61fK6Ck4yNL._AC_UL480_FMwebp_QL65_.jpg" alt="Aloe Vera Conditioner">
+        <h3>Aloe Vera Conditioner 250ml</h3>
+        <p>Price: Rs 650</p>
+        <button onclick="addToCart('Aloe Vera Conditioner', 650)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61hRv8q2+eL._AC_UL480_FMwebp_QL65_.jpg" alt="Hair Serum">
+        <h3>Argan Oil Hair Serum</h3>
+        <p>Price: Rs 899</p>
+        <button onclick="addToCart('Argan Oil Hair Serum', 899)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/61MlqFKc7GL._AC_UL480_FMwebp_QL65_.jpg" alt="Onion Oil">
+        <h3>Onion Black Seed Hair Oil</h3>
+        <p>Price: Rs 599</p>
+        <button onclick="addToCart('Onion Black Seed Hair Oil', 599)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71EwWkXc4xL._AC_UL480_FMwebp_QL65_.jpg" alt="Anti Dandruff Shampoo">
+        <h3>Anti-Dandruff Shampoo 300ml</h3>
+        <p>Price: Rs 720</p>
+        <button onclick="addToCart('Anti-Dandruff Shampoo', 720)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71Kh4mEYdXL._AC_UL480_FMwebp_QL65_.jpg" alt="Hair Growth Oil">
+        <h3>Hair Growth Oil 100ml</h3>
+        <p>Price: Rs 550</p>
+        <button onclick="addToCart('Hair Growth Oil 100ml', 550)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71yCwB4dG2L._AC_UL480_FMwebp_QL65_.jpg" alt="Coconut Shampoo">
+        <h3>Coconut Nourishing Shampoo</h3>
+        <p>Price: Rs 640</p>
+        <button onclick="addToCart('Coconut Nourishing Shampoo', 640)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/81D98SJeFZL._AC_UL480_FMwebp_QL65_.jpg" alt="Hair Mask">
+        <h3>Protein Hair Mask 200g</h3>
+        <p>Price: Rs 880</p>
+        <button onclick="addToCart('Protein Hair Mask 200g', 880)">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://m.media-amazon.com/images/I/71IrNkGcE6L._AC_UL480_FMwebp_QL65_.jpg" alt="Herbal Shampoo">
+        <h3>Herbal Daily Use Shampoo</h3>
+        <p>Price: Rs 499</p>
+        <button onclick="addToCart('Herbal Daily Use Shampoo', 499)">Add to Cart</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="cart.js"></script>
 </body>
 </html>
